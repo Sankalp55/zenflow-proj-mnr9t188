@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZenFlow theme tokens (HSL derived from blueprint hex palette) */
+@layer base {
+  :root {
+    /* radius */
+    --radius: 0.75rem;
+
+    /* core */
+    --background: 30 50% 96%; /* #FBF7F2 */
+    --foreground: 0 0% 10%; /* #1A1A1A */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 0 0% 10%; /* #1A1A1A */
+
+    --primary: 13 55% 50%; /* #C65A3A */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --secondary: 30 32% 85%; /* #E7D8C9 */
+    --secondary-foreground: 0 0% 10%; /* #1A1A1A */
+
+    --accent: 13 56% 46%; /* #B84E34 */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --muted: 31 35% 91%; /* #F1E8DE */
+    --muted-foreground: 27 11% 32%; /* #5B524A */
+
+    --border: 29 31% 85%; /* #E6D9CC */
+    --ring: 13 55% 50%; /* #C65A3A */
+  }
+
+  .dark {
+    /* Optional dark theme (feature flag in blueprint is false, but class support is scaffolded) */
+    --background: 0 0% 10%;
+    --foreground: 30 50% 96%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 30 50% 96%;
+
+    --primary: 13 55% 55%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 27 11% 20%;
+    --secondary-foreground: 30 50% 96%;
+
+    --accent: 13 56% 52%;
+    --accent-foreground: 0 0% 10%;
+
+    --muted: 27 11% 18%;
+    --muted-foreground: 30 18% 75%;
+
+    --border: 27 11% 22%;
+    --ring: 13 55% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: geometricPrecision;
+  }
+}
